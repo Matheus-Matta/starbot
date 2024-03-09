@@ -1,0 +1,337 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+main{
+  display: fixed !important;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+body{
+  width: 100vh;
+  height: 100vh;
+  position: fixed;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.area_notif{
+  position: fixed;
+  right: 5%;
+  top: 3%;
+}
+.popErr{
+  color: #fff;
+  font-size: 18px;
+  background-color: rgb(221, 23, 23);
+  padding: 10px 20px;
+  border-radius: 2px;
+  margin-top: 5px;
+  animation: fadeOut 5s forwards;
+}
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+  }
+
+  66%{
+    opacity: 1;
+  }
+  99%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+  }
+}
+.icon-login{
+  fill: #434a52;
+  width: 28px;
+}
+.icon-key{
+  fill:tomato;
+  width: 60px;
+  transform: rotate(135deg);
+  margin-right: -10px;
+  margin-bottom: -20px;
+}
+.content { float:left; height: 100%; width:100%; margin:0 4%; padding: 20px 0; }
+
+/*BTN*/
+.btn-download       { background-color:#ee2727; color:#fff; border-radius: 50px; font-family: 'open_sansregular'; padding: 0.5em 0.8em; display:block; float: none; text-decoration: none; margin: auto; width:100%; font-size: 1.5em; text-align: center; line-height: 40px; }
+.btn-download:hover { background-color:#d00f0f; color:#fff; }
+
+/*HEADER*/
+.main_header          { background:#ffffff; border-bottom:1px #f4f4f4 solid; z-index:1; padding: 0.5em 0em; }
+.main_header .content { float:left; padding:0px 0; }
+
+.fixed            { display:block; position:fixed; z-index:9;  }
+.main_header_logo { text-align:center; margin:auto; float:none; width:138px; }
+.main_header_logo img { height:69px; }
+
+/*Seu Código*/
+.section-seu-codigo          { height: 100%; padding:10px 0px; background-color:#232931; }
+.section-seu-codigo .content { float:left; padding:1em 0; }
+.section_title  { 
+
+    width: 100%;
+    float: left;
+    margin-bottom: 0.3em;
+    font-size: 2.3em;
+    font-weight: 300;
+    text-align: center;
+    border-bottom: 1px #eee solid;
+    padding-bottom: 0.3em;
+    color: #232931;
+
+}
+
+.box-artigo   { width:100%; float:left; }
+
+/*Formulario de Login*/
+
+.box-login {
+
+    background: #232931;
+    width: 320px;
+    max-width: 100%;
+    margin: auto;
+    padding: 1em; 
+
+}
+
+.title_login  { 
+
+    width: 100%;
+    float: left;
+    margin-bottom: 0.3em;
+    font-size: 2.3em;
+    font-weight: 300;
+    text-align: center;
+    border-bottom: 1px #363b41 solid;
+    padding-bottom: 0.3em;
+    color: tomato;
+
+}
+
+.hidden {
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+}
+
+input {
+
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+
+}
+
+input[type="submit"] {
+  
+  cursor: pointer;
+
+}
+
+.form {
+
+    width: 100%;
+    display: block;
+    float: left;
+
+}
+
+.form input[type="password"],
+.form input[type="text"],
+.form input[type="submit"] {
+  width: 100%;
+}
+
+.form_field {
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+
+}
+
+.form_input {
+
+  -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+}
+
+.login { color: #eee; }
+
+.login label,
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="submit"] {
+
+  border-radius:0.5em;
+  padding: 1em;
+
+}
+
+.login label {
+
+  background-color: #363b41;
+  color: #9c9ea2;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.login input[type="password"],
+.login input[type="text"] {
+  background-color: #3b4148;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.login input[type="password"]:focus,
+.login input[type="password"]:hover,
+.login input[type="text"]:focus,
+.login input[type="text"]:hover {
+  background-color: #434a52;
+}
+
+.login input[type="submit"] {
+
+  background-color: tomato;
+  color: #eee;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+
+.login input[type="submit"]:focus,
+.login input[type="submit"]:hover {
+  
+  background-color: rgba(255, 99, 71, 0.842);
+
+}
+
+.resgatar-senha p {
+ 
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
+}
+
+.resgatar-senha {
+  
+  text-align: center;
+  color: #8e8e8e;
+
+}
+
+.resgatar-senha a{
+
+  text-decoration:none;
+  color: #8e8e8e;
+
+}
+
+.resgatar-senha a:hover{
+  
+  text-decoration:underline;
+  color: #f29736;
+
+}
+/*Formulario de Login*/
+
+/*Seu Download*/
+.section-seu-download          { padding:10px 0px; background-color:#f4f4f4; }
+.section-seu-download .content { float:left; padding:1em 0; }
+.box-download                  { width:100%; float:left; background:transparent; padding:1em; }
+
+/*FOOTER*/
+.main_footer          { background-color:#353535; color:#fff; font-size:0.875em; }
+.main_footer .content { padding:3em 0em; }
+
+.main_footer_copy       { background-color:#262626; width:100%; float:left; text-align:center; padding:1.5em 0em; }
+.main_footer_copy p     { font-family:'open_sanslight'; font-size:1em; color:#e1e0e0; height:20px; }
+.main_footer_copy .m-b-footer   { margin-bottom:0.5em; }
+.main_footer_copy .by   { font-size:0.96em; }
+.main_footer_copy .by i { font-size:0.96em; margin-right:3px; color:#e82626; }
+
+.icon-key-1{
+  fill: tomato;
+  color: tomato;
+}
+/*Começa o Responsivo*/
+
+/*480PX BREAKPOINT*/
+/*480 dividido por 16 = 30em*/
+@media (min-width:30em){
+
+.boxBannerTopo { padding:1em 0; }
+
+}
+
+/*600PX BREAKPOINT*/
+/*600 dividido por 16 = 37,5em*/
+@media (min-width:37em){
+
+
+} 
+
+/*768PX BREAKPOINT*/
+/*768 dividido por 16 = 48em*/
+@media (min-width:48em){
+
+
+} 
+
+/*960PX BREAKPOINT*/
+/*960 dividido por 16 = 60em*/
+@media (min-width:60em){
+
+ .section-seu-codigo          { padding:20px 0px; }
+ .section-seu-codigo .content { width:80%; padding:7em 0; margin:0 10%; }
+
+.btn-download { width:35%; }
+
+}
+
+/*1280PX BREAKPOINT*/
+/*1280 dividido por 16 = 80em*/
+@media (min-width:80em){
+
+ 
+}
+
+/*1366PX BREAKPOINT*/
+/*1366 dividido por 16 = 85,375em*/
+@media (min-width:85em){
+
+ .content  { width:80%; margin:0 10%; }
+
+}
+
+/*1600PX BREAKPOINT*/
+/*1600 dividido por 16 = 100em*/
+@media (min-width:100em){
+
+
+}
+/*Fecha o Responsivo*
+

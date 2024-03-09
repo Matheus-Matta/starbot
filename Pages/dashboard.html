@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Starbot</title>
+        <link rel="stylesheet" href="./css/dashbord.css">
+        <link rel="shortcut icon" href="./uploads/smart_toy_FILL0_wght400_GRAD0_opsz24.svg" />
+        <title>Starbot</title>
+     
+     </head>
+<body>
+    <div class="cadastro">
+        <h1>Cadastro</h1>
+        <form action="" id="form">
+            <input name="nome"  type="text" placeholder="Nome" required>
+            <input name="sobrenome" type="text" placeholder="Sobrenome" required>
+            <input name="usuario" type="text" placeholder="Usuario" required>
+            <input name="senha" type="text" placeholder="Senha" required>
+            <select name="setor" id="setorSelect">
+                <option value="sac">Sac</option>
+                <option value="assistencia">Assistencia</option>
+                <option value="entrega">Entrega</option>
+                <option value="montagem">Montagem</option>
+                <option value="vendas">Vendas</option>
+            </select>
+            <button type="submit">Enviar</button>
+        </form>
+     </div>
+     <script>
+        document.querySelector("#form").addEventListener("submit",(event)=>{
+            event.preventDefault();
+            const data = new FormData(document.querySelector("#form"))
+            const json = {};
+            Array.from(data.entries()).forEach(([key, value]) => {
+                json[key] = value;
+            });
+            fetch("/cadastro",{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(json)
+            }).then(response =>{
+                if(response.ok){
+                    const inputs = document.querySelectorAll("#form input")
+                    inputs.forEach( ip =>{
+                        ip.value = ""
+                    })
+                }
+            }).catch(error =>{
+                console.log(error)
+            })            
+        })
+     </script>
+</body>
+</html>
